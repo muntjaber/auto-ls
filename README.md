@@ -9,6 +9,10 @@ There are many `auto-ls`s out there but this one is mine.
 - Auto `ls` on `enter-key` (with empty buffer)
 - Git status on a git work tree
 
+## Modification
+
+By default uses `exa` instead of `ls` if it is available. Removed additional newlines, where possible, from output.
+
 # Install
 
 - Manual
