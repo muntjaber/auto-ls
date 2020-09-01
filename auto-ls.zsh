@@ -1,6 +1,8 @@
 # vim: sw=2 ts=2 et!
 # set up default functions
 
+AUTO_LS_NEWLINE=false
+
 if (( ! ${+AUTO_LS_CHPWD} )); then
   AUTO_LS_CHPWD=true
 fi
@@ -49,7 +51,7 @@ auto-ls () {
     if [[ ${WIDGET} == accept-line ]] && [[ $#BUFFER -eq 0 ]]; then
       # Shortcut to reduce the number of empty lines appearing
       # when pressing Enter
-      echo && zle redisplay
+      zle redisplay
     elif [[ ${WIDGET} != accept-line ]] && [[ ${LASTWIDGET} == .accept-line ]]; then
       # Hack to make only 2 lines appear after `dirlist` navigation
       # (Uses a VT100 escape sequence to move curser up one line…)
