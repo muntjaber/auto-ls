@@ -21,7 +21,11 @@ fi
 
 
 auto-ls-ls () {
-  ls
+  if command -v exa >/dev/null 2>&1; then
+    exa -l
+  else
+    ls -l
+  fi
   [[ $AUTO_LS_NEWLINE != false ]] && echo ""
 }
 
