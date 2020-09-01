@@ -22,7 +22,7 @@ fi
 
 auto-ls-ls () {
   if command -v exa >/dev/null 2>&1; then
-    exa -l
+    exa -l --colour-scale
   else
     ls -l
   fi
